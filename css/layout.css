@@ -1,0 +1,199 @@
+/* css/layout.css (Improved for better mobile flow) */
+/* =========================================================
+   IT NANBARGAL — LAYOUT CSS (ELITE)
+   Purpose: Structure, spacing, hierarchy
+   Mobile-first • Calm • Intentional • Human-readable
+   NO animation logic
+   ========================================================= */
+
+/* =========================================================
+   SECTION BASE
+========================================================= */
+.section {
+  width: 100%;
+  padding: var(--space-xl) var(--space-md);
+}
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* =========================================================
+   HERO SECTION (Taller for mobile immersion)
+========================================================= */
+.hero {
+  min-height: 100vh; /* Full screen on mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 14vh;
+  background-color: var(--bg-main);
+}
+.hero-inner {
+  max-width: 580px; /* Slightly wider for readability */
+}
+.hero-sub {
+  margin-top: var(--space-md);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   WHY SECTION (LOCK ZONE)
+========================================================= */
+.why {
+  background-color: var(--bg-soft);
+}
+.lock-zone {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.why-text {
+  margin-top: var(--space-md);
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  line-height: 1.9;
+}
+
+/* =========================================================
+   FEATURES / CAPABILITIES / WORTH PAYING
+========================================================= */
+.features,
+.capabilities {
+  background-color: var(--bg-main);
+}
+
+/* Grid system (Mobile stack, tablet 2-col) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  max-width: 1200px; /* Wider max for laptop */
+  margin: 0 auto;
+}
+
+/* Cards inherit visuals from components.css */
+.card h3 {
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Feature explanation note */
+.features-note {
+  max-width: 760px;
+  margin: 52px auto 0;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   TRUST SECTION
+========================================================= */
+.trust {
+  background-color: var(--bg-soft);
+}
+.trust-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 26px;
+  padding: var(--space-lg);
+  border: 1px solid var(--border-soft);
+}
+.trust-box ul {
+  margin-top: var(--space-md);
+}
+.trust-box li {
+  font-size: 1rem;
+  color: var(--text-soft);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+.trust-box li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-success);
+}
+
+/* =========================================================
+   PRICE SECTION (STILLNESS)
+========================================================= */
+.price {
+  background-color: var(--bg-main);
+  text-align: center;
+}
+.price-box {
+  max-width: 460px;
+  margin: 0 auto;
+}
+.old-price {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.new-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: var(--space-xs);
+  color: var(--text-main);
+}
+.new-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.price-note {
+  margin-top: var(--space-md);
+  font-size: 1rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+.cta {
+  background-color: var(--bg-soft);
+  text-align: center;
+}
+.cta-btn {
+  margin-top: var(--space-md);
+}
+.cta-sub {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-soft);
+}
+.footer a {
+  display: inline-block;
+  margin: 0 var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.footer-note {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

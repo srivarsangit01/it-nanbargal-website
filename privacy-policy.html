@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — IT Nanbargal</title>
+    <meta
+      name="description"
+      content="Privacy Policy of IT Nanbargal. Learn how we collect, use, and protect your data with human-first IT support."
+    />
+    <meta name="theme-color" content="#071013" />
+
+    <!-- Use the same shared styles as the main site for consistency -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Page-specific overrides (extraordinary, premium feel) -->
+    <style>
+      /* ================= PAGE STRUCTURE ================= */
+      .pp-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .pp-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        background-color: rgba(7, 16, 19, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .back-btn {
+        font-size: 24px;
+        color: var(--text-main);
+        text-decoration: none;
+        padding: 4px;
+      }
+      .header-title {
+        flex: 1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-left: -32px; /* balance with back button */
+      }
+      .header-spacer {
+        width: 32px;
+      }
+
+      /* ================= HERO ================= */
+      .pp-hero {
+        text-align: center;
+        padding: 48px 24px 36px;
+        background: linear-gradient(to bottom, var(--bg-main), var(--bg-soft));
+      }
+      .shield {
+        font-size: 64px;
+        margin-bottom: 12px;
+      }
+      .app-title {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--text-main);
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        font-size: 16px;
+        color: var(--text-muted);
+        margin-bottom: 6px;
+      }
+      .updated {
+        font-size: 14px;
+        color: var(--text-soft);
+      }
+
+      /* ================= CONTENT ================= */
+      .pp-content {
+        flex: 1;
+        padding: 0 20px 40px;
+      }
+      .pp-card {
+        background: var(--bg-soft);
+        border-radius: 28px;
+        padding: 32px 28px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-soft);
+      }
+      .intro-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-soft);
+        margin-bottom: 32px;
+      }
+      .heading {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--accent-primary);
+        margin: 36px 0 16px;
+        letter-spacing: -0.01em;
+      }
+      .paragraph {
+        font-size: 15.5px;
+        line-height: 1.85;
+        color: var(--text-soft);
+        margin-bottom: 16px;
+      }
+      .block {
+        background: rgba(11, 18, 32, 0.6);
+        border: 1px solid var(--border-soft);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .block-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-bottom: 8px;
+      }
+      .block-text {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--text-muted);
+      }
+      .list {
+        padding-left: 20px;
+        margin: 16px 0;
+      }
+      .list li {
+        font-size: 15.5px;
+        color: var(--text-soft);
+        line-height: 1.8;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .list li::before {
+        content: '•';
+        position: absolute;
+        left: -20px;
+        color: var(--accent-success);
+        font-weight: bold;
+      }
+      .note {
+        font-size: 15px;
+        color: var(--accent-success);
+        font-weight: 700;
+        margin: 24px 0;
+        text-align: center;
+      }
+      .logo-wrap {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-wrap img.logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* ================= CONTACT ================= */
+      .contact-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 32px;
+        font-size: 16px;
+      }
+      .email {
+        color: var(--accent-soft);
+        text-decoration: underline;
+        font-weight: 600;
+      }
+
+      /* ================= RESPONSIVE ================= */
+      @media (min-width: 768px) {
+        .pp-card {
+          max-width: 720px;
+          margin: 0 auto;
+        }
+        .pp-header {
+          padding: 20px 32px;
+        }
+        .pp-hero {
+          padding: 64px 32px 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pp-page">
+      <!-- ================= HEADER ================= -->
+      <header class="pp-header">
+        <div class="header-spacer"></div>
+        <div class="header-title">Privacy Policy</div>
+        <div class="header-spacer"></div>
+      </header>
+
+      <!-- ================= HERO ================= -->
+      <section class="pp-hero">
+        <div class="logo-wrap">
+          <img src="logo.png" alt="IT Nanbargal Logo" class="logo" />
+        </div>
+
+        <h1 class="app-title">IT NANBARGAL</h1>
+        <p class="subtitle">Your privacy matters to us</p>
+        <p class="updated">Last Updated: January 03, 2026</p>
+      </section>
+
+      <!-- ================= CONTENT ================= -->
+      <main class="pp-content">
+        <article class="pp-card">
+          <p class="intro-text">
+            This Privacy Policy explains how IT Nanbargal collects, uses,
+            stores, and protects your information. By using this app, you agree
+            to the practices described below.
+          </p>
+
+          <h2 class="heading">Information We Collect</h2>
+
+          <div class="block">
+            <div class="block-title">Email Address</div>
+            <div class="block-text">
+              Used for login verification, support communication, and important
+              service-related messages.
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Payment Information</div>
+            <div class="block-text">
+              We store only transaction ID, payment status, amount paid, and
+              timestamp. We never store UPI PIN, card details, CVV, OTP, or bank
+              credentials.
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Messages & Files</div>
+            <div class="block-text">
+              Doubts, screenshots, PDFs, or files you share are used strictly
+              for providing technical support and are never sold or shared with
+              third parties.
+            </div>
+          </div>
+
+          <h2 class="heading">Support Communications</h2>
+          <p class="paragraph">
+            Support-related messages, emails, and files you submit may be
+            reviewed by authorized human support members solely for the purpose
+            of understanding and resolving your technical issues. We do not use
+            this data for advertising, profiling, or automated decision-making.
+          </p>
+
+          <h2 class="heading">Why We Collect Data</h2>
+          <ul class="list">
+            <li>Account authentication & security</li>
+            <li>Subscription verification</li>
+            <li>Technical support delivery</li>
+            <li>Payment validation</li>
+            <li>Fraud prevention & system integrity</li>
+          </ul>
+
+          <p class="note">We do NOT sell, rent, or trade your personal data.</p>
+
+          <h2 class="heading">Data Security</h2>
+          <p class="paragraph">
+            We follow industry-standard security practices to protect your
+            information. However, no online platform can guarantee absolute
+            security. Data is shared at your discretion.
+          </p>
+
+          <h2 class="heading">Third-Party Services</h2>
+          <p class="paragraph">
+            We may use trusted third-party services for authentication,
+            analytics, email delivery, and payments. These services operate
+            under their own privacy policies.
+          </p>
+
+          <h2 class="heading">Your Rights</h2>
+          <ul class="list">
+            <li>Request access to your data</li>
+            <li>Request correction or deletion</li>
+            <li>Withdraw consent where applicable</li>
+          </ul>
+
+          <h2 class="heading">Children’s Privacy</h2>
+          <p class="paragraph">
+            IT Nanbargal is not intended for children under the age of 13. If
+            such data is identified, please contact us for immediate removal.
+          </p>
+
+          <div class="contact-box">
+            <span>✉️</span>
+            <a href="mailto:hello.itnanbargal@gmail.com" class="email">
+              hello.itnanbargal@gmail.com
+            </a>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <!-- Reuse main.js for any shared interactions (e.g. reduced motion) -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

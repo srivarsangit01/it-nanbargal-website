@@ -1,0 +1,198 @@
+/* css/components.css (Improved for premium components) */
+/* =========================================================
+   IT NANBARGAL — COMPONENTS CSS (ELITE)
+   Purpose: Reusable UI components
+   Calm • Trustworthy • Premium • Human-first
+   NO animation logic (JS controls motion)
+   ========================================================= */
+
+/* =========================================================
+   1. REVEAL TEXT (BASE STATE)
+========================================================= */
+.reveal-text {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   2. CARD SYSTEM (CORE - More premium with gradients)
+========================================================= */
+.card {
+  position: relative;
+  isolation: isolate;
+  cursor: default;
+  will-change: transform;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 26px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  padding: 28px 26px;
+}
+
+/* Magnetic-ready */
+.card.magnetic {
+  cursor: pointer;
+}
+
+/* Depth-ready */
+.card.depth-card {
+  transform-style: preserve-3d;
+}
+
+/* =========================================================
+   3. CARD TYPOGRAPHY
+========================================================= */
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-soft);
+}
+
+/* Muted paragraph inside cards */
+.card .muted {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   4. CARD AFFORDANCE (SUBTLE & PREMIUM)
+========================================================= */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  border: 1px solid transparent;
+}
+
+/* Desktop-only hover hint (NO animation) */
+@media (hover: hover) {
+  .card:hover::after {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* =========================================================
+   5. CTA BUTTON (CONFIDENCE ELEMENT - Enhanced)
+========================================================= */
+.cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+  padding: 18px 32px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* CTA background layer */
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Static press feedback */
+.cta-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================================================
+   6. FEATURES NOTE (MENTAL ANCHOR)
+========================================================= */
+.features-note {
+  margin-top: 36px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+  opacity: 0.98;
+}
+
+/* =========================================================
+   7. TRUST LIST VISUAL REFINEMENT
+========================================================= */
+.trust-box li {
+  padding-left: 24px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   8. PRICE VISUAL EMPHASIS
+========================================================= */
+.old-price {
+  opacity: 0.7;
+}
+.new-price {
+  letter-spacing: -0.025em;
+}
+
+/* =========================================================
+   9. SCROLL & INTERACTION HELPERS
+========================================================= */
+[data-section] {
+  scroll-margin-top: 24px;
+}
+button {
+  touch-action: manipulation;
+}
+
+/* =========================================================
+   10. UTILITY CLASSES
+========================================================= */
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none !important;
+}
+.no-select {
+  user-select: none;
+}
+
+/* =========================================================
+   11. ACCESSIBILITY SAFETY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cta-btn {
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   12. FUTURE-PROOFING (DO NOT REMOVE)
+========================================================= */
+/*
+  - Magnetic motion → JS only
+  - Depth transforms → JS only
+  - Edge light tracing → JS only
+  - CTA breathing → JS only
+  - ZERO animation logic in this file
+*/

@@ -1,0 +1,109 @@
+/* =========================================================
+   IT NANBARGAL — RESPONSIVE CSS (ELITE)
+   Philosophy:
+   - 99% mobile-first
+   - Desktop = stability, not redesign
+   - Reading comfort > screen utilization
+   ========================================================= */
+/* =========================================================
+   SMALL DEVICES (DEFAULT)
+   Handled by base.css + layout.css
+========================================================= */
+/* =========================================================
+   TABLETS (≥ 768px)
+========================================================= */
+@media (min-width: 768px) {
+  /* Improve reading width without widening too much */
+  .hero-inner,
+  .lock-zone,
+  .trust-box,
+  .price-box {
+    max-width: 620px;
+  }
+  /* Cards move to 2-column, calm spacing */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  /* Vertical rhythm stays mobile-first */
+  .section {
+    padding: calc(var(--space-xl) - 8px) var(--space-lg);
+  }
+  /* Features note breathes a little more */
+  .features-note {
+    margin-top: 56px;
+  }
+}
+/* =========================================================
+   LAPTOP / DESKTOP (≥ 1024px)
+========================================================= */
+@media (min-width: 1024px) {
+  /* Hero remains centered, never wide */
+  .hero {
+    padding-top: 20vh;
+    padding-bottom: 14vh;
+  }
+  /* Cap content width aggressively */
+  .hero-inner,
+  .lock-zone,
+  .trust-box,
+  .price-box {
+    max-width: 660px;
+  }
+  /* Cards gain breathing space, not size */
+  .card {
+    padding: var(--space-lg);
+  }
+  /* CTA remains confident, not oversized */
+  .cta-btn {
+    min-width: 240px;
+    font-size: 0.95rem;
+  }
+  /* Footer text de-emphasized */
+  .footer-note {
+    font-size: 0.7rem;
+  }
+}
+/* =========================================================
+   LARGE SCREENS (≥ 1440px)
+   RULE: NEVER SCALE UP
+========================================================= */
+@media (min-width: 1440px) {
+  body {
+    background-color: var(--bg-main);
+  }
+  /* Hard-lock content width */
+  .hero-inner,
+  .lock-zone,
+  .trust-box,
+  .price-box {
+    max-width: 680px;
+  }
+  /* Prevent accidental wide grids */
+  .card-grid {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* =========================================================
+   HOVER SAFETY (TOUCH DEVICES)
+========================================================= */
+@media (hover: none) {
+  .card.magnetic {
+    cursor: default;
+  }
+  /* Prevent hover visuals on touch */
+  .card::after {
+    display: none;
+  }
+}
+/* =========================================================
+   REDUCED MOTION SAFETY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn {
+    animation: none !important;
+    transform: none !important;
+  }
+}

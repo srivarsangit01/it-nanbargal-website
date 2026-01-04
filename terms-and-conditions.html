@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions — IT Nanbargal</title>
+    <meta
+      name="description"
+      content="Terms & Conditions of IT Nanbargal. Please read carefully before using our services."
+    />
+    <meta name="theme-color" content="#071013" />
+
+    <!-- Use the same shared styles as the main site for consistency -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Page-specific overrides (extraordinary, premium feel) -->
+    <style>
+      /* ================= PAGE STRUCTURE ================= */
+      .tc-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .tc-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        background-color: rgba(7, 16, 19, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .back-btn {
+        font-size: 24px;
+        color: var(--text-main);
+        text-decoration: none;
+        padding: 4px;
+      }
+      .header-title {
+        flex: 1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-left: -32px; /* balance with back button */
+      }
+      .header-spacer {
+        width: 32px;
+      }
+
+      /* ================= HERO ================= */
+      .tc-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* ⬅️ horizontal center */
+        justify-content: center;
+        text-align: center;
+        padding: 48px 24px 36px;
+        background: linear-gradient(to bottom, var(--bg-main), var(--bg-soft));
+      }
+
+      .doc-icon {
+        display: block;
+        width: clamp(80px, 20vw, 120px);
+        height: auto;
+        margin: 0 auto 16px; /* ⬅️ true centering */
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+      }
+
+      .app-title {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--text-main);
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        font-size: 16px;
+        color: var(--text-muted);
+        margin-bottom: 6px;
+      }
+      .updated {
+        font-size: 14px;
+        color: var(--text-soft);
+      }
+
+      /* ================= CONTENT ================= */
+      .tc-content {
+        flex: 1;
+        padding: 0 20px 40px;
+      }
+      .tc-card {
+        background: var(--bg-soft);
+        border-radius: 28px;
+        padding: 32px 28px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-soft);
+      }
+      .intro-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-soft);
+        margin-bottom: 32px;
+      }
+      .heading {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--accent-warn); /* Orange accent for warnings/terms */
+        margin: 36px 0 16px;
+        letter-spacing: -0.01em;
+      }
+      .paragraph {
+        font-size: 15.5px;
+        line-height: 1.85;
+        color: var(--text-soft);
+        margin-bottom: 16px;
+      }
+      .list {
+        padding-left: 20px;
+        margin: 16px 0;
+      }
+      .list > div {
+        font-size: 15.5px;
+        color: var(--text-soft);
+        line-height: 1.8;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .list > div::before {
+        content: '•';
+        position: absolute;
+        left: -20px;
+        color: var(--accent-success);
+        font-weight: bold;
+      }
+      .note {
+        font-size: 15px;
+        color: var(--accent-success);
+        font-weight: 700;
+        margin: 24px 0;
+      }
+      .block {
+        background: rgba(11, 18, 32, 0.6);
+        border: 1px solid var(--border-soft);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .block-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-bottom: 8px;
+      }
+      .block-text {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--text-muted);
+      }
+
+      /* ================= CONTACT ================= */
+      .contact-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 32px;
+        font-size: 16px;
+      }
+      .email {
+        color: var(--accent-soft);
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      /* Small logo (same as Privacy Policy) */
+      .logo-wrap {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-wrap img.logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* ================= RESPONSIVE ================= */
+      @media (min-width: 768px) {
+        .tc-card {
+          max-width: 720px;
+          margin: 0 auto;
+        }
+        .tc-header {
+          padding: 20px 32px;
+        }
+        .tc-hero {
+          padding: 64px 32px 48px;
+        }
+        .doc-icon {
+          width: clamp(100px, 15vw, 140px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tc-page">
+      <!-- ================= HEADER ================= -->
+      <header class="tc-header">
+        <div class="header-spacer"></div>
+        <div class="header-title">Terms & Conditions</div>
+        <div class="header-spacer"></div>
+      </header>
+
+      <!-- ================= HERO ================= -->
+      <section class="tc-hero">
+        <div class="logo-wrap">
+          <img src="logo.png" alt="IT Nanbargal Logo" class="logo" />
+        </div>
+
+        <h1 class="app-title">IT NANBARGAL</h1>
+        <p class="subtitle">Please read carefully</p>
+        <p class="updated">Last Updated: January 03, 2026</p>
+      </section>
+
+      <!-- ================= CONTENT ================= -->
+      <main class="tc-content">
+        <article class="tc-card">
+          <p class="intro-text">
+            By accessing or using IT Nanbargal, you agree to the following Terms
+            & Conditions. These terms define the scope, limitations, and rules
+            of using this platform.
+          </p>
+
+          <h2 class="heading">About IT Nanbargal</h2>
+          <div class="list">
+            <div>• Technical guidance & explanations</div>
+            <div>• Debugging assistance</div>
+            <div>• Project-related support</div>
+            <div>• Email-based help</div>
+          </div>
+          <p class="note">
+            IT Nanbargal is NOT a training institute, job portal, freelancing
+            agency, or project execution service. We guide — you build.
+          </p>
+
+          <h2 class="heading">User Responsibilities</h2>
+          <div class="list">
+            <div>• Use the app respectfully</div>
+            <div>• Do not misuse support services</div>
+            <div>• Do not share or resell access</div>
+            <div>• Follow platform rules</div>
+          </div>
+
+          <h2 class="heading">Subscription & Lifetime Access</h2>
+          <p class="paragraph">
+            Subscription is a one-time payment unless stated otherwise. Lifetime
+            access refers to the lifetime of the IT Nanbargal service, not the
+            lifetime of the user.
+          </p>
+          <p class="paragraph">
+            Features, delivery methods, and support formats may evolve, but core
+            access granted at the time of purchase will always be honored.
+          </p>
+          <div class="list">
+            <div>• App access</div>
+            <div>• Email support for basic doubts</div>
+            <div>• General technical guidance</div>
+          </div>
+
+          <h2 class="heading">Support Policy</h2>
+          <div class="block">
+            <div class="block-title">Human-Based Support</div>
+            <div class="block-text">
+              IT Nanbargal provides guidance and responses through real human
+              support members. We do not use automated bots for answering
+              technical doubts. Response time may vary based on complexity,
+              availability, and workload.
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-title">Email Support (Included)</div>
+            <div class="block-text">
+              Email support covers basic and reasonable doubts only.
+              Time-intensive, repeated, or project-level issues are excluded.
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-title">1-to-1 Consultation</div>
+            <div class="block-text">
+              Free 1-to-1 support is limited and not guaranteed. Priority or
+              detailed assistance is a paid service and may include calls,
+              screen sharing, or extended debugging.
+            </div>
+          </div>
+
+          <h2 class="heading">Freelance Guidance & Leads</h2>
+          <p class="paragraph">
+            Freelance guidance or client leads, if offered, are optional paid
+            services and are not included in the base subscription unless
+            explicitly stated.
+          </p>
+
+          <h2 class="heading">Payments & Refunds</h2>
+          <p class="paragraph">
+            All payments are final and non-refundable once service access is
+            provided. Fake payment proofs or abuse may result in permanent
+            suspension without refund.
+          </p>
+
+          <h2 class="heading">Misuse & Termination</h2>
+          <p class="paragraph">
+            Repeated misuse, abusive behavior, spamming, or violation of these
+            terms may lead to suspension or termination of access without
+            refund.
+          </p>
+
+          <div class="contact-box">
+            <span>✉️</span>
+            <a href="mailto:hello.itnanbargal@gmail.com" class="email">
+              hello.itnanbargal@gmail.com
+            </a>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <!-- Reuse main.js for any shared interactions (e.g. reduced motion) -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Nanbargal – Digital Visiting Card</title>
+    <meta
+      name="description"
+      content="IT Nanbargal – Real IT Guidance in Tamil. Real humans. Real project support."
+    />
+    <style>
+      :root {
+        --primary: #3b82f6;
+        --primary-light: #60a5fa;
+        --primary-dark: #2563eb;
+        --text: #ffffff;
+        --text-muted: #e2e8f0;
+        --text-soft: #a0aec0;
+        --bg-glass: rgba(255, 255, 255, 0.08);
+        --border-glow: rgba(96, 165, 250, 0.4);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        background: radial-gradient(ellipse at top, #1e293b, #020617);
+        color: var(--text);
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+
+      .card {
+        width: 100%;
+        max-width: 440px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.04)
+        );
+        border-radius: 32px;
+        border: 1.5px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        padding: 48px 32px 40px;
+        text-align: center;
+        backdrop-filter: blur(20px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 32px;
+        padding: 2px;
+        background: linear-gradient(135deg, var(--border-glow), transparent);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid rgba(59, 130, 246, 0.7);
+        box-shadow: 0 0 50px rgba(59, 130, 246, 0.5);
+        background: rgba(59, 130, 246, 0.15);
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      h1 {
+        font-size: 38px;
+        font-weight: 900;
+        margin-bottom: 12px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-light),
+          var(--primary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.8px;
+      }
+
+      .tagline {
+        font-size: 19px;
+        color: var(--text-muted);
+        line-height: 1.5;
+        margin-bottom: 28px;
+        font-weight: 600;
+      }
+
+      .divider {
+        width: 100px;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        margin: 0 auto 28px;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+      }
+
+      .trust {
+        font-size: 15px;
+        color: var(--text-soft);
+        line-height: 1.8;
+        margin-bottom: 40px;
+        font-weight: 500;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 22px 28px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--text);
+        background: var(--bg-glass);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        min-height: 68px;
+        backdrop-filter: blur(10px);
+      }
+
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .btn.primary {
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark),
+          var(--primary)
+        );
+        border: none;
+        color: white;
+        font-weight: 800;
+        font-size: 19px;
+        box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+      }
+
+      .btn.primary:hover {
+        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.7);
+      }
+
+      .btn svg {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+      }
+
+      .email-subtitle {
+        font-size: 15px;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      .note {
+        font-size: 14.5px;
+        color: var(--text);
+        line-height: 1.8;
+        margin-bottom: 32px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 18px;
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        font-weight: 500;
+      }
+
+      .note strong {
+        color: #60a5fa;
+        font-size: 15.5px;
+      }
+
+      .footer {
+        font-size: 13px;
+        color: #718096;
+        line-height: 1.9;
+      }
+
+      /* Larger screens (tablet/desktop) */
+      @media (min-width: 640px) {
+        .card {
+          padding: 60px 40px;
+        }
+        h1 {
+          font-size: 44px;
+        }
+        .logo {
+          width: 140px;
+          height: 140px;
+        }
+        .tagline {
+          font-size: 21px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="logo">
+        <img src="logo.png" alt="IT Nanbargal Logo" />
+      </div>
+
+      <h1>IT Nanbargal</h1>
+      <div class="tagline">
+        Real IT Guidance in Tamil.<br />
+        From Real Humans. Real Support.
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="trust">
+        MSME Registered · GST Enabled<br />
+        All communication via official email only
+      </div>
+
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="https://play.google.com/store/apps/details?id=YOUR_APP_ID"
+          target="_blank"
+        >
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M3 20.5v-17l18 17zM5 14.5l12.5-8.5-8.5 12.5zM17 3l-14 14 5.5-5.5z"
+            />
+          </svg>
+          Install App from Play Store
+        </a>
+
+        <a class="btn" href="mailto:hello.itnanbargal@gmail.com">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            />
+          </svg>
+          <div>
+            Talk to IT Nanbargal<br />
+            <span class="email-subtitle">hello.itnanbargal@gmail.com</span>
+          </div>
+        </a>
+
+        <a
+          class="btn"
+          href="https://srivarsangit01.github.io/it-nanbargal-website/"
+          target="_blank"
+        >
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.06-7.44 7-7.93V17.93zm2-13.86c3.94.49 7 3.85 7 7.93s-3.06 7.44-7 7.93V4.07z"
+            />
+          </svg>
+          Visit Official Website
+        </a>
+      </div>
+
+      <div class="note">
+        All technical guidance and project support are provided
+        <strong>ONLY inside the IT Nanbargal app</strong>.<br /><br />
+        <strong>No WhatsApp · No Telegram · No direct calls</strong>
+      </div>
+
+      <div class="footer">
+        GSTIN: <strong>YOUR_GST_NUMBER</strong><br />
+        UDYAM: <strong>YOUR_UDYAM_NUMBER</strong><br />
+        © 2026 IT Nanbargal · Official IT Support Platform
+      </div>
+    </div>
+  </body>
+</html>
