@@ -1,24 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>IT Nanbargal – Digital Visiting Card</title>
+
     <meta
       name="description"
       content="IT Nanbargal – Real IT Guidance in Tamil. Real humans. Real project support."
     />
+
     <style>
+      /* ===============================
+   COLOR SYSTEM
+================================*/
+
       :root {
         --primary: #3b82f6;
         --primary-light: #60a5fa;
         --primary-dark: #2563eb;
+
         --text: #ffffff;
-        --text-muted: #e2e8f0;
-        --text-soft: #a0aec0;
-        --bg-glass: rgba(255, 255, 255, 0.08);
-        --border-glow: rgba(96, 165, 250, 0.4);
+        --text-muted: #dbe3ee;
+        --text-soft: #94a3b8;
+
+        --glass: rgba(255, 255, 255, 0.06);
+        --glass-strong: rgba(255, 255, 255, 0.12);
+
+        --border: rgba(255, 255, 255, 0.18);
       }
+
+      /* ===============================
+   RESET
+================================*/
 
       * {
         box-sizing: border-box;
@@ -27,60 +42,94 @@
       }
 
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
           sans-serif;
-        background: radial-gradient(ellipse at top, #1e293b, #020617);
+
+        background: radial-gradient(circle at top, #1e293b, #020617);
+
         color: var(--text);
+
         min-height: 100dvh;
+
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding: 20px;
-        padding: env(safe-area-inset-top) env(safe-area-inset-right)
-          env(safe-area-inset-bottom) env(safe-area-inset-left);
+        justify-content: center;
+
+        padding: 24px;
       }
+
+      /* ===============================
+   CARD
+================================*/
 
       .card {
         width: 100%;
         max-width: 440px;
+
+        padding: 56px 34px 46px;
+
+        border-radius: 32px;
+
         background: linear-gradient(
           180deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.04)
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.02)
         );
-        border-radius: 32px;
-        border: 1.5px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-        padding: 48px 32px 40px;
+
+        border: 1px solid var(--border);
+
+        backdrop-filter: blur(18px);
+
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+
         text-align: center;
-        backdrop-filter: blur(20px);
+
         position: relative;
-        overflow: hidden;
       }
+
+      /* subtle glow border */
 
       .card::before {
         content: '';
+
         position: absolute;
         inset: 0;
+
         border-radius: 32px;
-        padding: 2px;
-        background: linear-gradient(135deg, var(--border-glow), transparent);
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
+
+        background: linear-gradient(
+          135deg,
+          rgba(96, 165, 250, 0.45),
+          transparent 60%
+        );
+
+        opacity: 0.35;
+
         pointer-events: none;
       }
+
+      /* ===============================
+   LOGO
+================================*/
 
       .logo {
         width: 120px;
         height: 120px;
-        margin: 0 auto 32px;
+
+        margin: 0 auto 30px;
+
         border-radius: 50%;
+
         overflow: hidden;
-        border: 6px solid rgba(59, 130, 246, 0.7);
-        box-shadow: 0 0 50px rgba(59, 130, 246, 0.5);
+
+        border: 5px solid rgba(59, 130, 246, 0.6);
+
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+
         background: rgba(59, 130, 246, 0.15);
       }
 
@@ -90,83 +139,113 @@
         object-fit: contain;
       }
 
+      /* ===============================
+   BRAND
+================================*/
+
       h1 {
-        font-size: 38px;
+        font-size: 40px;
         font-weight: 900;
-        margin-bottom: 12px;
+
+        margin-bottom: 10px;
+
         background: linear-gradient(
           90deg,
           var(--primary-light),
           var(--primary)
         );
+
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: -0.8px;
       }
 
       .tagline {
-        font-size: 19px;
-        color: var(--text-muted);
-        line-height: 1.5;
-        margin-bottom: 28px;
+        font-size: 18px;
         font-weight: 600;
+
+        color: var(--text-muted);
+
+        line-height: 1.5;
+
+        margin-bottom: 28px;
       }
 
+      /* divider */
+
       .divider {
-        width: 100px;
-        height: 5px;
+        width: 90px;
+        height: 4px;
+
+        margin: 0 auto 28px;
+
+        border-radius: 4px;
+
         background: linear-gradient(
           90deg,
           var(--primary),
           var(--primary-light)
         );
-        margin: 0 auto 28px;
-        border-radius: 5px;
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+
+        box-shadow: 0 0 16px rgba(59, 130, 246, 0.6);
       }
 
+      /* ===============================
+   TRUST TEXT
+================================*/
+
       .trust {
-        font-size: 15px;
+        font-size: 14px;
         color: var(--text-soft);
+
         line-height: 1.8;
-        margin-bottom: 40px;
-        font-weight: 500;
+
+        margin-bottom: 34px;
       }
+
+      /* ===============================
+   BUTTON AREA
+================================*/
 
       .actions {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        margin-bottom: 40px;
+
+        gap: 18px;
+
+        margin-bottom: 34px;
       }
 
       .btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16px;
-        padding: 22px 28px;
-        font-size: 18px;
+
+        gap: 14px;
+
+        padding: 20px 26px;
+
+        border-radius: 18px;
+
+        font-size: 17px;
         font-weight: 700;
+
         text-decoration: none;
+
+        background: var(--glass);
+
+        border: 1px solid var(--border);
+
         color: var(--text);
-        background: var(--bg-glass);
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        transition: all 0.4s ease;
-        min-height: 68px;
-        backdrop-filter: blur(10px);
+
+        transition: 0.35s;
       }
 
       .btn:hover {
-        background: rgba(255, 255, 255, 0.18);
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-      }
+        transform: translateY(-4px);
 
-      .btn:active {
-        transform: translateY(0);
+        background: var(--glass-strong);
+
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
       }
 
       .btn.primary {
@@ -175,70 +254,58 @@
           var(--primary-dark),
           var(--primary)
         );
-        border: none;
-        color: white;
-        font-weight: 800;
-        font-size: 19px;
-        box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
-      }
 
-      .btn.primary:hover {
-        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.7);
+        border: none;
+
+        box-shadow: 0 14px 40px rgba(37, 99, 235, 0.65);
       }
 
       .btn svg {
-        width: 28px;
-        height: 28px;
-        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
       }
 
-      .email-subtitle {
-        font-size: 15px;
-        color: var(--text-muted);
-        font-weight: 600;
-      }
+      /* ===============================
+   POLICY NOTE
+================================*/
 
       .note {
-        font-size: 14.5px;
-        color: var(--text);
-        line-height: 1.8;
-        margin-bottom: 32px;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 18px;
-        border: 1.5px solid rgba(255, 255, 255, 0.12);
-        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.7;
+
+        padding: 18px;
+
+        margin-bottom: 30px;
+
+        background: rgba(0, 0, 0, 0.35);
+
+        border-radius: 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
       }
 
       .note strong {
         color: #60a5fa;
-        font-size: 15.5px;
       }
+
+      /* ===============================
+   FOOTER
+================================*/
 
       .footer {
         font-size: 13px;
-        color: #718096;
-        line-height: 1.9;
+
+        color: #6b7a90;
+
+        line-height: 1.8;
       }
 
-      /* Larger screens (tablet/desktop) */
-      @media (min-width: 640px) {
-        .card {
-          padding: 60px 40px;
-        }
-        h1 {
-          font-size: 44px;
-        }
-        .logo {
-          width: 140px;
-          height: 140px;
-        }
-        .tagline {
-          font-size: 21px;
-        }
+      .footer strong {
+        color: #cbd5e1;
       }
     </style>
   </head>
+
   <body>
     <div class="card">
       <div class="logo">
@@ -246,16 +313,17 @@
       </div>
 
       <h1>IT Nanbargal</h1>
+
       <div class="tagline">
         Real IT Guidance in Tamil.<br />
-        From Real Humans. Real Support.
+        Manually Reviewed by Experts.
       </div>
 
       <div class="divider"></div>
 
       <div class="trust">
-        MSME Registered · GST Enabled<br />
-        All communication via official email only
+        MSME Registered • GST Enabled<br />
+        All communication through official email only
       </div>
 
       <div class="actions">
@@ -264,24 +332,11 @@
           href="https://play.google.com/store/apps/details?id=YOUR_APP_ID"
           target="_blank"
         >
-          <svg fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M3 20.5v-17l18 17zM5 14.5l12.5-8.5-8.5 12.5zM17 3l-14 14 5.5-5.5z"
-            />
-          </svg>
-          Install App from Play Store
+          Install from Play Store
         </a>
 
         <a class="btn" href="mailto:hello.itnanbargal@gmail.com">
-          <svg fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-            />
-          </svg>
-          <div>
-            Talk to IT Nanbargal<br />
-            <span class="email-subtitle">hello.itnanbargal@gmail.com</span>
-          </div>
+          Contact Support
         </a>
 
         <a
@@ -289,25 +344,22 @@
           href="https://srivarsangit01.github.io/it-nanbargal-website/"
           target="_blank"
         >
-          <svg fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.06-7.44 7-7.93V17.93zm2-13.86c3.94.49 7 3.85 7 7.93s-3.06 7.44-7 7.93V4.07z"
-            />
-          </svg>
           Visit Official Website
         </a>
       </div>
 
       <div class="note">
         All technical guidance and project support are provided
-        <strong>ONLY inside the IT Nanbargal app</strong>.<br /><br />
-        <strong>No WhatsApp · No Telegram · No direct calls</strong>
+        <strong>only inside the IT Nanbargal app.</strong><br /><br />
+
+        No WhatsApp • No Telegram • No direct calls
       </div>
 
       <div class="footer">
-        GSTIN: <strong>YOUR_GST_NUMBER</strong><br />
-        UDYAM: <strong>YOUR_UDYAM_NUMBER</strong><br />
-        © 2026 IT Nanbargal · Official IT Support Platform
+        GSTIN: <strong>33RDXPS2095Q1ZY</strong><br />
+        UDYAM: <strong>UDYAM-TN-20-0215420</strong><br />
+
+        © 2026 IT Nanbargal
       </div>
     </div>
   </body>
