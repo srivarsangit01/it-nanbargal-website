@@ -242,3 +242,342 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
 }
+
+/* ===== SAME RECTANGLE STYLE FOR ALL CARDS ===== */
+
+/* ================= AI SECTION PERFECT CENTER ================= */
+/* ================= AI MESSAGE (FINAL FIX) ================= */
+
+.ai-message {
+  padding: 80px 20px;
+}
+
+/* center container */
+.ai-message .test-container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* center single card perfectly */
+.ai-message .test-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SAME CARD STYLE */
+.ai-message .test-card {
+  width: 100%;
+  max-width: 520px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border-radius: 26px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+  text-align: center;
+}
+
+/* hover */
+.ai-message .test-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* PERFECT SQUARE VIDEO */
+.ai-message .test-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.ai-message .test-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+}
+
+.ai-message .test-name {
+  color: #9aa4b2;
+  font-weight: 600;
+}
+.ai-message h2 {
+  text-align: center;
+  width: 100%;
+}
+/* ================= EXTRAORDINARY AI SECTION ================= */
+
+/* title */
+.ai-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* sub */
+.ai-sub {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+/* center grid */
+.ai-message .test-grid {
+  display: flex;
+  justify-content: center;
+}
+
+/* card premium */
+.ai-card {
+  max-width: 520px;
+  text-align: center;
+}
+
+/* label */
+.ai-proof {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: #9aa4b2;
+}
+/* ===== INTERNSHIP POWER STYLE ===== */
+
+.internship-card {
+  transform: scale(1.04);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  box-shadow: 0 25px 70px rgba(34, 197, 94, 0.18);
+}
+
+.internship-card:hover {
+  transform: scale(1.06);
+}
+
+/* =========================================
+   REALITY — FINAL CLEAN VERSION
+========================================= */
+
+.section.reality {
+  padding: 100px 20px;
+}
+
+/* container */
+
+.section.reality .container {
+  max-width: 720px;
+  margin: auto;
+  text-align: center; /* 🔥 FINAL alignment */
+}
+
+/* heading */
+
+.section.reality h2 {
+  margin-bottom: 22px;
+}
+
+/* normal lines */
+
+.section.reality .reality-line {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin: 6px 0;
+  color: var(--text-soft);
+}
+
+/* strong lines */
+
+.section.reality .reality-line.strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* spacing */
+
+.section.reality .reality-gap {
+  height: 14px;
+}
+
+/* MOBILE PERFECT */
+
+@media (max-width: 768px) {
+  .section.reality {
+    padding: 80px 18px;
+  }
+
+  .section.reality h2 {
+    font-size: 1.4rem;
+  }
+
+  .section.reality .reality-line {
+    font-size: 1rem;
+  }
+
+  .section.reality .reality-line.strong {
+    font-size: 1.1rem;
+  }
+}
+/* =========================================================
+   INTERNSHIP TOP BAR — FINAL PERFECT VERSION
+========================================================= */
+
+.internship-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(34, 197, 94, 0.95);
+  color: #000;
+
+  padding: 10px 14px; /* clean spacing */
+}
+
+/* INNER */
+
+/* PERFECT TOP BAR SYSTEM */
+
+.internship-inner {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+/* LEFT SIDE (LOGO + TEXT) */
+
+.internship-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* clean spacing */
+}
+
+/* LOGO */
+
+.internship-bar-logo {
+  width: 26px; /* slightly bigger */
+  height: 26px;
+  object-fit: contain;
+}
+
+/* TEXT */
+
+.internship-text {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 0 10px; /* 🔥 add this */
+}
+
+/* BUTTON */
+
+.internship-btn {
+  border: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+
+  background: #000;
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .internship-bar {
+    padding: 8px 10px;
+  }
+
+  .internship-bar-logo {
+    width: 30px; /* bigger */
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .internship-text {
+    font-size: 0.9rem;
+  }
+
+  .internship-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+/* WHY SECTION ALIGN FIX — FINAL */
+
+.section.why .lock-zone {
+  text-align: left;
+}
+
+.section.why h2 {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.section.why .why-text {
+  text-align: left;
+  max-width: 720px;
+  margin-bottom: 14px;
+}
+
+/* INTERNSHIP CARD LOGO */
+
+.internship-card {
+  position: relative;
+}
+
+.internship-logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* REALITY H2 PERFECT LEFT */
+
+/* COMPANY NAME (TOP BAR) */
+
+.internship-brand {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .internship-inner {
+    grid-template-columns: auto 1fr;
+    row-gap: 6px;
+  }
+
+  .internship-btn {
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+  .internship-text {
+    font-size: 0.85rem;
+  }
+
+  .internship-bar-logo {
+    width: 24px;
+    height: 24px;
+  }
+}
