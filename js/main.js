@@ -103,3 +103,20 @@ if (scrollHint) {
 
   window.addEventListener('scroll', onFirstScroll, { passive: true });
 }
+/* -------------------------
+   INTERNSHIP SCROLL
+-------------------------- */
+
+window.scrollToInternship = function () {
+  const el = document.getElementById('internship');
+  if (!el) return;
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  el.scrollIntoView({
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    block: 'center',
+  });
+};
