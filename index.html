@@ -25,6 +25,28 @@
   </head>
 
   <body>
+    <!-- ================= INTERNSHIP TOP BAR ================= -->
+
+    <div class="internship-bar">
+      <div class="internship-inner">
+        <!-- LEFT -->
+        <div class="internship-left">
+          <img src="logo.png" alt="IT Nanbargal" class="internship-bar-logo" />
+          <span class="internship-brand">IT Nanbargal</span>
+        </div>
+
+        <!-- CENTER TEXT -->
+        <span class="internship-text">
+          🔥 Most Popular — Project-Based Internship
+        </span>
+
+        <!-- RIGHT BUTTON -->
+        <button class="internship-btn" onclick="scrollToInternship()">
+          View Details
+        </button>
+      </div>
+    </div>
+
     <!-- SCROLL PROGRESS -->
     <div id="scroll-progress" aria-hidden="true"></div>
 
@@ -41,6 +63,9 @@
           Built for Tamil developers who get stuck in real projects — not for
           theory, not for hype.
         </p>
+        <p class="muted" style="margin-top: 10px">
+          Trusted by 500+ Tamil developers solving real project problems.
+        </p>
       </div>
     </section>
 
@@ -49,6 +74,28 @@
       <span class="scroll-line"></span>
     </div>
 
+    <!-- ================= REALITY ================= -->
+
+    <section class="section reality" data-section="reality">
+      <div class="container center">
+        <h2 class="reveal-text">Reality Most Developers Face</h2>
+
+        <p class="reality-line">Tutorials feel easy.</p>
+        <p class="reality-line strong">Real projects don’t.</p>
+
+        <div class="reality-gap"></div>
+
+        <p class="reality-line">Errors appear.</p>
+        <p class="reality-line">APIs fail.</p>
+        <p class="reality-line">Logic breaks.</p>
+        <p class="reality-line">Deployment stops.</p>
+
+        <div class="reality-gap"></div>
+
+        <p class="reality-line strong">Most quit here.</p>
+        <p class="reality-line">Serious developers don’t.</p>
+      </div>
+    </section>
     <!-- ================= WHY ================= -->
 
     <section class="section why" data-section="why">
@@ -56,10 +103,10 @@
         <h2 class="reveal-text">Why IT Nanbargal Exists</h2>
 
         <p class="why-text">
-          Most people start learning IT through YouTube videos, courses, and
-          tutorials. This helps them understand the basics.
+          Most people learn IT.<br />
+          Few survive real projects.
         </p>
-
+        <p class="why-text">The difference is not talent — it is guidance.</p>
         <p class="why-text">
           The real problem begins when they start working on real projects —
           errors appear, APIs fail, logic breaks, and deployment stops.
@@ -85,9 +132,12 @@
     <section class="section capabilities" data-section="capabilities">
       <div class="container">
         <h2 class="section-title reveal-text">
-          What you get inside IT Nanbargal
+          Real problems IT Nanbargal helps you solve
         </h2>
-
+        <p class="center" style="margin-bottom: 28px">
+          This is not a course.<br />
+          This is real-time problem solving support.
+        </p>
         <div class="card-grid">
           <!-- Project Help -->
           <article class="card depth-card magnetic">
@@ -172,9 +222,11 @@
 
             <div class="layer-front"></div>
           </article>
-
           <!-- ✅ NEW INTERNSHIP CARD -->
-          <article class="card depth-card magnetic internship-card">
+          <article
+            id="internship"
+            class="card depth-card magnetic internship-card"
+          >
             <div class="layer-back"></div>
 
             <div class="layer-mid">
@@ -197,6 +249,43 @@
 
             <div class="layer-front"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-message">
+      <div class="test-container">
+        <!-- TITLE -->
+        <h2 class="reveal-text ai-title">
+          AI is powerful.<br />
+          But real skills still decide who gets hired.
+        </h2>
+        <p class="ai-sub" style="margin-bottom: 28px">
+          Watch this before you decide anything.
+        </p>
+
+        <!-- CARD -->
+        <div class="test-grid">
+          <div class="test-card ai-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_1"
+                title="Company Perspective on Hiring"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+
+            <p class="test-name ai-proof">Company Perspective on Hiring</p>
+          </div>
         </div>
       </div>
     </section>
@@ -328,6 +417,8 @@
           You may not need this every day.<br />
           But the day you're stuck — this saves hours.
         </p>
+
+        <p class="muted">Less than one Swiggy order.</p>
       </div>
     </section>
 
