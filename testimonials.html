@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Testimonials | IT Nanbargal</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      /* ===== PAGE RESET ===== */
+
+      .test-page * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      .test-page {
+        background: #071013;
+        color: #f0f2f5;
+        overflow-x: hidden;
+      }
+
+      /* ===== BG GLOW ===== */
+
+      .test-glow {
+        position: fixed;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, #1ba548, transparent);
+        top: -260px;
+        left: -260px;
+        filter: blur(160px);
+        z-index: -1;
+        opacity: 0.5;
+      }
+
+      /* ================= HERO ================= */
+
+      .test-hero {
+        min-height: 65vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 130px 20px 50px;
+
+        background:
+          radial-gradient(
+            circle at 50% -10%,
+            rgba(34, 197, 94, 0.15),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #071013, #050b0f);
+      }
+
+      .test-hero-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .test-hero h1 {
+        font-size: clamp(2.6rem, 5vw, 3.4rem);
+        letter-spacing: -0.03em;
+
+        background: linear-gradient(180deg, #fff, #cbd5e1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .test-hero p {
+        font-size: 1.05rem;
+        color: #9aa4b2;
+      }
+
+      /* ================= CONTENT ================= */
+
+      .test-section {
+        padding: 40px 20px 100px;
+      }
+
+      .test-container {
+        max-width: 1150px;
+        margin: auto;
+      }
+
+      /* ===== FUTURE SAFE GRID ===== */
+      .test-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 32px !important;
+      }
+
+      @media (max-width: 768px) {
+        .test-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      /* mobile */
+
+      @media (max-width: 768px) {
+        .test-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ================= CARD ================= */
+
+      .test-card {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        border-radius: 26px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+      }
+
+      .test-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+      }
+
+      .test-video {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 14px;
+      }
+
+      .test-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        border: 0;
+      }
+
+      .test-name {
+        text-align: center;
+        color: #9aa4b2;
+        font-weight: 600;
+      }
+
+      /* ================= CTA ================= */
+
+      .test-cta {
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      .test-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        border-radius: 999px;
+
+        background: linear-gradient(135deg, #1ba548, #22c55e);
+        color: #000;
+        font-weight: 700;
+        text-decoration: none;
+
+        transition: 0.3s;
+        box-shadow: 0 14px 34px rgba(27, 165, 72, 0.4);
+      }
+
+      .test-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 50px rgba(27, 165, 72, 0.6);
+      }
+
+      /* ================= FOOTER ================= */
+
+      .footer {
+        margin-top: 120px;
+        padding: 90px 24px 50px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(0, 0, 0, 0.5)
+        );
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+      }
+
+      .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.35),
+          transparent
+        );
+      }
+
+      .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .footer-brand-area {
+        margin-bottom: 50px;
+      }
+
+      .footer-brand-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-logo {
+        width: 28px;
+        height: 28px;
+      }
+
+      .footer-brand {
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+
+      .footer-tagline {
+        margin-top: 10px;
+        font-size: 0.95rem;
+        color: #9ca3af;
+      }
+
+      .footer-founder {
+        margin-top: 4px;
+        font-size: 0.9rem;
+        color: #9ca3af;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 50px;
+      }
+
+      .footer-heading {
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .footer-link {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        color: #9ca3af;
+      }
+
+      .footer-address {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: #9ca3af;
+      }
+
+      .footer a {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        color: #9ca3af;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: #f0f2f5;
+      }
+
+      .footer-divider {
+        height: 1px;
+        margin: 35px 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .footer-business {
+        font-size: 0.8rem;
+        color: #9ca3af;
+      }
+
+      .footer-note {
+        font-size: 0.75rem;
+        color: #9ca3af;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="test-page">
+    <div class="test-glow"></div>
+
+    <!-- HERO -->
+
+    <section class="test-hero">
+      <div class="test-hero-box">
+        <h1>What Students Say</h1>
+        <p>Real feedback from students who trained with IT Nanbargal.</p>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+
+    <section class="test-section">
+      <div class="test-container">
+        <div class="test-grid">
+          <!-- 🔥 ADD UNLIMITED VIDEOS HERE -->
+
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_1"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Arun K — Final Year, Kongu Engineering College <br />
+              <span class="test-proof">Launched First Live Website</span>
+            </p>
+          </div>
+
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_2"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Divya R — Final Year, PSG Tech <br />
+              <span class="test-proof">Overcame Deployment Errors</span>
+            </p>
+          </div>
+
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_3"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Praveen S — Placed, Zoho <br />
+              <span class="test-proof">Interview Confidence Increased</span>
+            </p>
+          </div>
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_3"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Nisha M — Placed, Startup Company <br />
+              <span class="test-proof">Gained Real Project Exposure</span>
+            </p>
+          </div>
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_3"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Karthik R — Final Year, Coimbatore Institute of Technology <br />
+              <span class="test-proof">Worked on Real Projects Daily</span>
+            </p>
+          </div>
+
+          <div class="test-card">
+            <div class="test-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID_4"
+              ></iframe>
+            </div>
+            <p class="test-name">
+              Sneha P — Final Year, Bannari Amman Institute of Technology <br />
+              <span class="test-proof">Gained Real-World Clarity</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="test-cta">
+          <a href="showcase.html" class="test-btn">View Student Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand-area">
+          <div class="footer-brand-row">
+            <img src="logo.png" class="footer-logo" />
+            <span class="footer-brand">IT Nanbargal</span>
+          </div>
+
+          <p class="footer-tagline">
+            Human-First IT Guidance for Real Developers
+          </p>
+          <p class="footer-founder">Operated by SriVarsan</p>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <p class="footer-heading">Support</p>
+            <p class="footer-link">hello.itnanbargal@gmail.com</p>
+            <p class="footer-link">+91 9566609569</p>
+            <p class="footer-link">Support hours: 8:00 AM – 9:00 PM</p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Registered Address</p>
+            <p class="footer-address">
+              368/9E1, Gangapuram Road<br />
+              Behind Vinayagar Temple<br />
+              Mettaiyankadu, Chithode<br />
+              Erode District<br />
+              Tamil Nadu – 638102, India
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Legal</p>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-business">
+            GSTIN: 33RDXPS2095Q1ZY • UDYAM: UDYAM-TN-20-0215420
+          </p>
+          <p class="footer-note">
+            © 2026 IT Nanbargal • Human-First IT Guidance
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
