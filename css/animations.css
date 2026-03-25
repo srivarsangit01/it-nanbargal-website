@@ -28,7 +28,8 @@
   opacity: 0;
   transform: translateY(12px);
   filter: blur(4px); /* Softer blur */
-  transition: clip-path var(--motion-slow) var(--motion-ease),
+  transition:
+    clip-path var(--motion-slow) var(--motion-ease),
     opacity var(--motion-base) var(--motion-soft),
     transform var(--motion-slow) var(--motion-ease),
     filter var(--motion-base) var(--motion-soft);
@@ -48,7 +49,8 @@
 .section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity var(--motion-slow) var(--motion-soft),
+  transition:
+    opacity var(--motion-slow) var(--motion-soft),
     transform var(--motion-slow) var(--motion-ease);
   will-change: transform, opacity;
 }
@@ -62,7 +64,8 @@
    Slight scale = mental pause
 ========================================================= */
 .lock-zone {
-  transition: transform var(--motion-base) var(--motion-soft),
+  transition:
+    transform var(--motion-base) var(--motion-soft),
     opacity var(--motion-base) var(--motion-soft);
 }
 .lock-zone.is-locked {
@@ -74,11 +77,13 @@
    Responsive, not playful
 ========================================================= */
 .card.magnetic {
-  transition: transform var(--motion-fast) var(--motion-ease),
+  transition:
+    transform var(--motion-fast) var(--motion-ease),
     box-shadow var(--motion-fast) var(--motion-soft);
 }
 .card.magnetic.is-hovered {
-  box-shadow: 0 30px 68px rgba(0, 0, 0, 0.6),
+  box-shadow:
+    0 30px 68px rgba(0, 0, 0, 0.6),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
@@ -101,7 +106,8 @@
    Used for tap-focus systems
 ========================================================= */
 .card.is-active {
-  transition: transform var(--motion-base) var(--motion-ease),
+  transition:
+    transform var(--motion-base) var(--motion-ease),
     box-shadow var(--motion-base) var(--motion-soft),
     opacity var(--motion-base) var(--motion-soft);
 }
@@ -137,7 +143,8 @@
    Breathes only when user is ready
 ========================================================= */
 .cta-btn {
-  transition: transform var(--motion-fast) var(--motion-ease),
+  transition:
+    transform var(--motion-fast) var(--motion-ease),
     box-shadow var(--motion-fast) var(--motion-soft);
 }
 .cta-btn.is-breathing {
@@ -301,5 +308,14 @@ body.slow-scroll .section {
 .scroll-hint.hide {
   opacity: 0;
   transform: translate(-50%, 8px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* FIX: ensure AI section always visible */
+
+.ai-message {
+  opacity: 1 !important;
+  transform: none !important;
 }
