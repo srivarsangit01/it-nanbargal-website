@@ -581,3 +581,189 @@ button {
     height: 24px;
   }
 }
+/* testimonial proof highlight */
+
+.test-proof {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 999px;
+}
+/* =========================================================
+   FINAL CTA (SHOWCASE PAGE)
+   Calm authority • High conversion • Premium feel
+========================================================= */
+
+.final-cta {
+  padding: 100px 20px 40px;
+  text-align: center;
+}
+
+.final-cta-inner {
+  max-width: 640px;
+  margin: auto;
+
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 0.08),
+    rgba(0, 0, 0, 0.35)
+  );
+
+  border-radius: 28px;
+  padding: 46px 32px;
+
+  border: 1px solid rgba(34, 197, 94, 0.35);
+
+  box-shadow: 0 25px 80px rgba(34, 197, 94, 0.15);
+}
+
+/* title */
+
+.final-cta-title {
+  margin-bottom: 10px;
+}
+
+/* subtitle */
+
+.final-cta-sub {
+  color: #9ca3af;
+  margin-bottom: 26px;
+  font-size: 15px;
+}
+
+/* button */
+
+.final-cta-btn {
+  display: inline-block;
+
+  padding: 16px 36px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #22c55e, #28d663);
+
+  color: #000;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+
+  transition: 0.25s;
+
+  box-shadow: 0 14px 40px rgba(34, 197, 94, 0.35);
+}
+
+/* hover */
+
+.final-cta-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 20px 55px rgba(34, 197, 94, 0.5);
+}
+
+/* small note */
+
+.final-cta-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 80px 16px 30px;
+  }
+
+  .final-cta-inner {
+    padding: 36px 22px;
+  }
+
+  .final-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   REALITY SECTION (IMPACT REFINED)
+   Calm but emotionally strong
+========================================================= */
+/* =========================================================
+   REALITY CARD STYLE
+========================================================= */
+
+.reality-card {
+  max-width: 520px;
+  margin: 32px auto 0;
+
+  padding: 40px 32px;
+
+  border-radius: 26px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  border: 1px solid var(--border-soft);
+
+  text-align: center;
+}
+
+/* bullet container */
+
+.reality-list {
+  list-style: none;
+
+  margin: 22px auto;
+
+  padding: 0;
+
+  width: fit-content;
+
+  text-align: left;
+}
+
+/* each row */
+
+.reality-list li {
+  position: relative;
+
+  padding-left: 20px;
+
+  margin: 10px 0;
+
+  font-size: 1.05rem;
+
+  color: var(--text-muted);
+}
+
+/* bullet */
+
+.reality-list li::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 9px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+}
